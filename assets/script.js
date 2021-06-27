@@ -15,7 +15,8 @@
 var todayDate = moment().format("dddd, MMM Do YYYY");
 $('#currentDay').html(todayDate);
 // Can I condense this ^?
-
+var todayTime = moment().format("h:mm a");
+$('#currentTime').html(todayTime);
 // Start of saving text area to local storage
 // parse text area when save button clicked?
 // return stringify?
