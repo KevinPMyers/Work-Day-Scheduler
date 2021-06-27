@@ -12,26 +12,25 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
+// variable for current date
 var todayDate = moment().format("dddd, MMM Do YYYY");
 $('#currentDay').html(todayDate);
-// Can I condense this ^?
+
 var todayTime = moment().format("h:mm a");
 $('#currentTime').html(todayTime);
-// Start of saving text area to local storage
-// parse text area when save button clicked?
-// return stringify?
-// 
+
 var currentHour = moment().format("H")
-// var currentHour = 13
+
 // clear button
 
+// Function to save all items on schedule, and display the current color coded time-block 
 $(document).ready(function() {
     
     var textAreas = $('.description')
     var arrTime = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]
     var arrNum = [9, 10, 11, 12 ,13, 14 , 15 , 16 , 17]
     for (i=0; i<textAreas.length; i++){
-        // console.log(textAreas[i])
+        
         textAreas[i].value = localStorage.getItem(arrTime[i])
 
         if(currentHour > arrNum[i]){
@@ -45,7 +44,7 @@ $(document).ready(function() {
     } 
 
     $('.saveBtn').click(function(){
-        // var text = JSON.parse.$('.description');
+        
         var value= $(this).prev().val()
         localStorage.setItem($(this).prev().prev().text(), value)
     }
