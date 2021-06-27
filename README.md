@@ -23,3 +23,7 @@ THEN the saved events persist
 
 ## Made By:
 Kevin Myers
+
+## Live URL:
+https://kevinpmyers.github.io/Work-Day-Scheduler/
+
